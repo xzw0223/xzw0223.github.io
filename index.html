@@ -377,6 +377,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/Out/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小刘">
+      <meta itemprop="description" content="花有重开日,人无再少年">
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Px-Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/23/Out/" class="post-title-link" itemprop="url">Out</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-23 19:08:35 / 修改时间：19:35:18" itemprop="dateCreated datePublished" datetime="2019-07-23T19:08:35+08:00">2019-07-23</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">前后端分离，本质上是解耦合</span><br><span class="line">由于	协作规模越大，会产生很多复杂的问题，解决不是很容易</span><br><span class="line">所以	解决这类问题的方法就是，分类治之，各自解决各自领域的问题(让专业人士做专业的事情)</span><br><span class="line">前后端分离思想 : 各自专业的人解决专业的问题</span><br></pre></td></tr></table></figure>
+
+<h4 id="一条完整的Sql语句的模版"><a href="#一条完整的Sql语句的模版" class="headerlink" title="一条完整的Sql语句的模版"></a>一条完整的Sql语句的模版</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * <span class="keyword">from</span> 数据表名 where 分组前的条件筛选<span class="built_in"> group </span>by 要分组的列 having 分组后的条件筛选 order by 要排序的列 limit 起始索引, 个数;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	<div>
+		
+	</div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/自娱自乐/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -422,7 +578,7 @@
                 
               
 
-              <time title="创建时间：2019-07-23 14:08:01 / 修改时间：14:13:22" itemprop="dateCreated datePublished" datetime="2019-07-23T14:08:01+08:00">2019-07-23</time>
+              <time title="创建时间：2019-07-23 14:08:01 / 修改时间：19:44:10" itemprop="dateCreated datePublished" datetime="2019-07-23T14:08:01+08:00">2019-07-23</time>
             </span>
           
 
@@ -469,6 +625,8 @@
         
           
             <h4 id="Windows中杀死占用某个端口的进程"><a href="#Windows中杀死占用某个端口的进程" class="headerlink" title="Windows中杀死占用某个端口的进程"></a>Windows中杀死占用某个端口的进程</h4><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">打开cmd命令窗口，输入命令，根据端口号查找对应的进程号</span><br><span class="line">	netstat -ano | findstr <span class="number">4000</span> <span class="comment">//列出进程极其占用的端口，且包含 4000  "比如说Query到PID为66666"  </span></span><br><span class="line">据进程号寻找进程名称	</span><br><span class="line">	tasklist | findstr <span class="number">66666</span></span><br><span class="line">	</span><br><span class="line">杀死进程	</span><br><span class="line">	taskkill -PID &lt;<span class="number">66666</span>&gt; -F <span class="comment">//强制关闭某个进程</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="NotePad-更改背景颜色"><a href="#NotePad-更改背景颜色" class="headerlink" title="NotePad++ 更改背景颜色"></a>NotePad++ 更改背景颜色</h4><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>设置--语言格式设置</span><br><span class="line"><span class="number">2.</span>设置背景色</span><br><span class="line"><span class="number">3.</span>Apply</span><br></pre></td></tr></table></figure>
 
 
           
@@ -576,7 +734,7 @@
                 
               
 
-              <time title="创建时间：2019-07-23 13:52:00 / 修改时间：14:21:30" itemprop="dateCreated datePublished" datetime="2019-07-23T13:52:00+08:00">2019-07-23</time>
+              <time title="创建时间：2019-07-23 13:52:00 / 修改时间：23:31:31" itemprop="dateCreated datePublished" datetime="2019-07-23T13:52:00+08:00">2019-07-23</time>
             </span>
           
 
@@ -622,20 +780,55 @@
       
         
           
-            <h2 id="高效查看MySQL帮助文档的方法"><a href="#高效查看MySQL帮助文档的方法" class="headerlink" title="高效查看MySQL帮助文档的方法"></a>高效查看MySQL帮助文档的方法</h2><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在mysql的使用过程中, 可能经常会遇到以下问题:</span><br><span class="line"></span><br><span class="line">某个操作语法忘记了, 如何快速查找?</span><br><span class="line">如何快速知道当前版本上某个字段类型的取值范围?</span><br><span class="line">当前版本都支持哪些函数?希望有例子说明..</span><br><span class="line">当前版本是否支持某个功能?</span><br><span class="line">    对于上面列出的问题, 我们可能想到的方法是查找MySQL的文档, 这些问题在官方文档都可以很清楚地查到, 但是却要耗费大量的时间和精力.</span><br><span class="line">    所以对于以上问题, 最好的解决办法就是使用MySQL安装后自带的帮助文档, 这样在遇到问题时就可以方便快捷地进行查询.</span><br></pre></td></tr></table></figure>
+            <h1 id="Mysql的一些常识"><a href="#Mysql的一些常识" class="headerlink" title="Mysql的一些常识"></a>Mysql的一些常识</h1><h2 id="高效查看MySQL帮助文档的方法"><a href="#高效查看MySQL帮助文档的方法" class="headerlink" title="高效查看MySQL帮助文档的方法"></a><strong>高效查看</strong>MySQL帮助文档的方法</h2><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在mysql的使用过程中, 可能经常会遇到以下问题:</span><br><span class="line"></span><br><span class="line">某个操作语法忘记了, 如何快速查找?</span><br><span class="line">如何快速知道当前版本上某个字段类型的取值范围?</span><br><span class="line">当前版本都支持哪些函数?希望有例子说明..</span><br><span class="line">当前版本是否支持某个功能?</span><br><span class="line">    对于上面列出的问题, 我们可能想到的方法是查找MySQL的文档, 这些问题在官方文档都可以很清楚地查到, 但是却要耗费大量的时间和精力.</span><br><span class="line">    所以对于以上问题, 最好的解决办法就是使用MySQL安装后自带的帮助文档, 这样在遇到问题时就可以方便快捷地进行查询.</span><br></pre></td></tr></table></figure>
 
 <h3 id="按层次查看帮助"><a href="#按层次查看帮助" class="headerlink" title="按层次查看帮助"></a>按层次查看帮助</h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查看目录	&gt;  ? contents</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查看数据类型  &gt; ? data types  </span></span><br><span class="line">	&gt; ? int</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查看函数 &gt; ? functions</span></span><br><span class="line">	&gt; ? Date <span class="keyword">and</span> <span class="built_in">Time</span> Functions</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 快速查阅帮助 &gt; ? show</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 关键字查找 &gt; ? %int%    ? show %create%</span></span><br></pre></td></tr></table></figure>
 
 
-
-<h3 id="紧张"><a href="#紧张" class="headerlink" title="紧张"></a>紧张</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不等于  &lt;&gt; !=</span><br><span class="line">指定字符串长度 length(字段) = <span class="keyword">size</span>  或者 like <span class="string">'____'</span></span><br><span class="line">平均值 字段<span class="regexp">/  truncate(field/</span> ,<span class="keyword">size</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="Mysql常用网络资源"><a href="#Mysql常用网络资源" class="headerlink" title="Mysql常用网络资源"></a>Mysql常用网络资源</h3><hr>
 <p><a href="http://dev.mysql.com/downloads/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/</a>是MySQL的官方网站, 可以下载到各个版本的MySQL以及相关客户端开发工具等.</p>
 <p><a href="http://dev.mysql.com/doc/" target="_blank" rel="noopener">http://dev.mysql.com/doc/</a>提供了目前最权威的MySQL数据库及工具的在线手册</p>
 <p><a href="http://bugs.mysql.com/" target="_blank" rel="noopener">http://bugs.mysql.com/</a> 这里可以查看到MySQL已经发布的bug列表, 或者向MySQL提交bug报告</p>
 <p><a href="http://www.mysql.com/news-and-events/newsletter/" target="_blank" rel="noopener">http://www.mysql.com/news-and-events/newsletter/</a>通常会发布各种关于MySQL的最新消息.</p>
+<hr>
+<h2 id="一些日志"><a href="#一些日志" class="headerlink" title="一些日志"></a>一些日志</h2><h3 id="No"><a href="#No" class="headerlink" title="No"></a>No</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">不等于  &lt;&gt; !=</span><br><span class="line"></span><br><span class="line">指定字符串长度 length(字段) = size  或者 like '____'</span><br><span class="line"></span><br><span class="line">平均值 字段/  truncate(field/ ,size)</span><br><span class="line"></span><br><span class="line">去重	<span class="keyword">select</span> <span class="keyword">distinct</span> 字段名称<span class="number">1</span>,字段名称<span class="number">2.</span>.. <span class="keyword">from</span>  表名</span><br><span class="line"></span><br><span class="line">日期操作	<span class="keyword">select</span> year(<span class="string">'1988-01-01'</span>)  <span class="number">1988</span></span><br><span class="line"></span><br><span class="line">DDL	DML	DCL	DQL</span><br><span class="line">	</span><br><span class="line">子查询:	https://www.w3cschool.cn/sql/zjdc1oz3.html</span><br><span class="line">	-- <span class="keyword">exists</span>:  表示存在，当子查询的结果存在，就会显示主查询中的所有数据  <span class="keyword">where</span> <span class="keyword">exists</span>(...)</span><br><span class="line">	-- <span class="keyword">union</span>: 用于将不同表中相同列中查询的数据展示出来；（不包括重复数据）</span><br><span class="line">	-- <span class="keyword">union</span> <span class="keyword">all</span>: 用于将不同表中相同列中查询的数据展示出来；（包括重复数据）</span><br><span class="line"></span><br><span class="line"><span class="keyword">Case</span> <span class="keyword">When</span>:	https://www.cnblogs.com/Richardzhu/p/<span class="number">3571670.</span>html</span><br><span class="line"></span><br><span class="line">事物:</span><br><span class="line">	查看MySQL是否开启了<span class="string">"事务的自动提交"</span>功能: <span class="keyword">show</span> variables <span class="keyword">like</span> <span class="string">'%commit%'</span>;</span><br><span class="line">	查看当前事务的隔离级别: <span class="keyword">select</span> @@tx_isolation;</span><br><span class="line">	设置当前事务的隔离级别: set session transaction isolation level 隔离级别;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">MySQL中定义数据字段的类型对你数据库的优化是非常重要的</span><br><span class="line">Mysql支持多种类型,大致可以分为三类 [数值,日期/时间,字符串]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 数据类型</span></span><br><span class="line">	<span class="comment">-- tinyint,int,double</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 日期和时间类型</span></span><br><span class="line">	<span class="comment">-- Data: 年月日 </span></span><br><span class="line">	<span class="comment">-- Time: 时分秒</span></span><br><span class="line">	<span class="comment">-- DataTime: 自定义时间</span></span><br><span class="line">	<span class="comment">-- StampData: 时间戳,采用当前系统默认时间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 字符串类型	</span></span><br><span class="line">	<span class="comment">-- CHAR: 0-255字节,   定长字符串, 未存满则后边用空格补齐.</span></span><br><span class="line">	<span class="comment">-- VARCHAR: 0-65535字节, 变长字符串, 后边不会用空格补齐.</span></span><br><span class="line">	<span class="comment">-- BLOB: 以二进制形式存储, 例如: 图片, 音频, 视频等.</span></span><br><span class="line">	<span class="comment">-- TEXT(CLOB): 以文件方式存储</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-tag">select</span> <span class="selector-tag">version</span>();		<span class="comment">//查看当前MySQL的版本</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">current_Date</span>();	<span class="comment">//获取日期(年月日)	</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">curDate</span>();		<span class="comment">//获取日期(年月日)</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">current_Time</span>();	<span class="comment">//获取时间(时分秒)</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">curTime</span>();		<span class="comment">//获取时间(时分秒)</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">1</span>) 字符串函数		<span class="comment">//参考Java中的String#一些方法</span></span><br><span class="line">		<span class="selector-tag">CONCAT</span>();		<span class="comment">//字符串 s1,s2 等多个字符串合并为一个字符串</span></span><br><span class="line">		<span class="selector-tag">LCASE</span>();		<span class="comment">//将字符串 s 的所有字母变成小写字母</span></span><br><span class="line">		<span class="selector-tag">LOWER</span>();		<span class="comment">//将字符串 s 的所有字母变成小写字母</span></span><br><span class="line">		<span class="selector-tag">UCASE</span>();		<span class="comment">//将字符串 s 的所有字母变成大写字母</span></span><br><span class="line">		<span class="selector-tag">UPPER</span>();		<span class="comment">//将字符串 s 的所有字母变成大写字母</span></span><br><span class="line">		<span class="selector-tag">REVERSE</span>();		<span class="comment">//反转</span></span><br><span class="line">		<span class="selector-tag">SUBSTRING</span>();	<span class="comment">//截取	例如: select substring('Spark is Ever', 6, 5);</span></span><br><span class="line">		</span><br><span class="line"><span class="selector-tag">2</span>) 数字函数			<span class="comment">//参考Java中的Math#一些方法</span></span><br><span class="line">		<span class="selector-tag">ABS</span>();			<span class="comment">//求绝对值</span></span><br><span class="line">		<span class="selector-tag">CEIL</span>();			<span class="comment">//求天花板数</span></span><br><span class="line">		<span class="selector-tag">FLOOR</span>();		<span class="comment">//求地板数</span></span><br><span class="line">		<span class="selector-tag">PI</span>();			<span class="comment">//求圆周率</span></span><br><span class="line">		<span class="selector-tag">RAND</span>();			<span class="comment">//获取0~1之间的随机数,	例如:  select floor(rand()*10) +1; 获取1~10	之间的随机数.</span></span><br><span class="line">		<span class="selector-tag">ROUND</span>();		<span class="comment">//四舍五入</span></span><br><span class="line">		</span><br><span class="line">		<span class="selector-tag">count</span>();		<span class="comment">//聚合函数</span></span><br><span class="line">		<span class="selector-tag">max</span>();</span><br><span class="line">		<span class="selector-tag">min</span>();</span><br><span class="line">		<span class="selector-tag">avg</span>();</span><br><span class="line">		<span class="selector-tag">sum</span>();</span><br><span class="line">		</span><br><span class="line"><span class="selector-tag">3</span>) 日期函数</span><br><span class="line">		<span class="selector-tag">NOW</span>();			<span class="comment">//获取当前时间</span></span><br><span class="line">		<span class="selector-tag">YEAR</span>();			<span class="comment">//获取年份</span></span><br><span class="line">		<span class="selector-tag">MONTH</span>();		<span class="comment">//获取月份</span></span><br><span class="line">		<span class="selector-tag">DAY</span>();			<span class="comment">//获取天</span></span><br><span class="line">	</span><br><span class="line"><span class="selector-tag">4</span>) 高级函数</span><br><span class="line">		<span class="selector-tag">USER</span>();</span><br><span class="line">		<span class="selector-tag">DATABASE</span>();</span><br><span class="line">		...</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mysql的索引"><a href="#Mysql的索引" class="headerlink" title="Mysql的索引"></a>Mysql的索引</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">概述:MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度。</span><br><span class="line">	分类:	</span><br><span class="line">		索引分单列索引和组合索引。</span><br><span class="line">		单列索引:</span><br><span class="line">			即一个索引只包含单个列，一个表可以有多个单列索引.</span><br><span class="line">		组合索引:</span><br><span class="line">			即一个索引包含多个列。</span><br><span class="line"></span><br><span class="line">	注意:</span><br><span class="line">		1: 创建索引时，你需要确保该索引是应用在	SQL 查询语句的条件(一般作为 WHERE 子句的条件)。</span><br><span class="line">		2: 实际上，索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录。</span><br><span class="line">		3: 上面都在说使用索引的好处，但过多的使用索引将会造成滥用。因此索引也会有它的缺点：虽然索引大大提高了查询速度，</span><br><span class="line">		   同时却会降低更新表的速度，如对表进行INSERT、UPDATE和DELETE。因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件。</span><br><span class="line">		4: 建立索引会占用磁盘空间的索引文件。</span><br><span class="line">		5: 我们以前用的&quot;主键约束&quot;, &quot;唯一约束&quot;都属于: 唯一索引.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>具体用法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1: 显示索引信息</span><br><span class="line">  	SHOW INDEX FROM 数据表名; \G		//加入&quot;\g&quot;, 会让格式看起来更规整.</span><br><span class="line">  		</span><br><span class="line">2: 创建索引.</span><br><span class="line">  	create index 索引名 on 数据表名(字段名(长度));</span><br><span class="line">  			示例: create index id_Index on A(A_ID);	</span><br><span class="line"></span><br><span class="line">3: 删除索引.</span><br><span class="line"> 	 alter table 数据表名 drop index 索引名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Mysql事物"><a href="#Mysql事物" class="headerlink" title="Mysql事物"></a>Mysql事物</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">事务的特点:		//ACID</span><br><span class="line">	原子性: 强调事务的多个操作不可分割.	</span><br><span class="line">	一致性: 强调事务执行的前后, 数据完整性保持一致.</span><br><span class="line">	隔离性: 强调事务执行过程中, 不应该受到其他事务的干扰.</span><br><span class="line">	持久性: 强调事务一旦结束, 数据就持久到数据库中.</span><br><span class="line">	</span><br><span class="line">不考虑隔离性, 有可能出现以下问题</span><br><span class="line"></span><br><span class="line">	关于读的问题:</span><br><span class="line">		脏读: 一个事务读取到了另一个事务还没有提交的数据.</span><br><span class="line">				</span><br><span class="line">		不可重复读: 一个事务读取到了另一个事务提交过的 /**修改的数据*/ 导致多次查询结果不一致.</span><br><span class="line">			</span><br><span class="line">		虚读: 一个事务读取到了另一个事务提交过的 /**添加的数据*/ 导致多次查询结果不一致.</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">	关于写的问题:</span><br><span class="line">			丢失更新</span><br><span class="line">			</span><br><span class="line">考虑隔离性:</span><br><span class="line">	隔离级别权限从小到大分别是:</span><br><span class="line">		read uncommitted  &lt; read committed &lt; repeatable read &lt; serializable</span><br><span class="line">		</span><br><span class="line">	安全性从小到大分别是:</span><br><span class="line">		read uncommitted  &lt; read committed &lt; repeatable read &lt; serializable</span><br><span class="line">			</span><br><span class="line">	效率从高到低分别是:</span><br><span class="line">		read uncommitted  &gt; read committed &gt; repeatable read &gt; serializable</span><br><span class="line">			</span><br><span class="line">	read uncommitted: 有可能引发脏读, 不可重复读, 虚读.</span><br><span class="line">	read commit:	  能规避脏读, 但是有可能发生不可重复读, 虚读.</span><br><span class="line">	repeatable read:  能规避脏读, 不可重复读, 但是有可能发生虚读.</span><br><span class="line">	serializable: 	  串行化的, 能规避这三种.</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据库并发的控制"><a href="#数据库并发的控制" class="headerlink" title="数据库并发的控制"></a>数据库并发的控制</h2><ul>
+<li><strong>并发调度的可串行化</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可串行化准则：</span><br><span class="line">	多个事务的并发执行时正确的，当且仅当其结果按某一次序串行执行它们时的结果相同，这种调度策略称为可串行化调度。</span><br><span class="line">	可串行化是并发事务正确性的准则，一个给定的并发调度，当且仅当它是可串行化的，才认为是正确的。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>封锁</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">封锁是实现并发控制的非常重要的技术。</span><br><span class="line">	封锁是指事务在对数据对象进行操作以前，先请求系统对其加锁，成功加锁之后该事务就对该数据对象有了控制权，只有该事务对其进行解锁之后，其他的事务才能更新它.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>*<em>锁的分类  [排它锁,共享锁] *</em></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A: 排它锁（也称作X锁): 可读可写</span><br><span class="line">		如果事务T在对某个数据对象实施了X锁，那么其他的事务必须要等到T事务结束对该数据对象的X锁之后，才能对这个数据进行加锁。</span><br><span class="line"></span><br><span class="line">B: 共享锁（也称作S锁)：只能进行读取工作</span><br><span class="line">		如果事务T在对某个数据对象实施了S锁，那么其他的事务也能对该数据对象实施S锁，但是对这个数据对象施加的所有S锁都释放之前不允许任何事务对该数据对象实施X锁。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>封锁异常</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">问题描述: 封锁技术可以避免一些并发操作引起的不一致错误，但也会产生其他的一些问题，活锁和死锁。</span><br><span class="line">	活锁: 如果某个事务处在永远等待的状态，得不到封锁的机会，这种现象为活锁，避免这种锁最好的方法就是采用先来先服务的策略。</span><br><span class="line"></span><br><span class="line">	死锁: 两个或两个以上的事务都处于等待状态每个事务都在等待对方事务接触封锁，它才能继续执行下去，这样任何事务都处于等待状态而无法继续执行的现象称为死锁</span><br><span class="line">	</span><br><span class="line">解决方案: //大致有以下几类</span><br><span class="line">		A、 死锁的预防</span><br><span class="line">		B、 死锁的诊断与预防 //: 尽量别写这样的代码, 如果出现问题了, 只能手动修改源代码.</span><br></pre></td></tr></table></figure>
+
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用:"></a>引用:</h2><p><a href="https://www.cnblogs.com/chenqionghe/p/4834565.html" target="_blank" rel="noopener">https://www.cnblogs.com/chenqionghe/p/4834565.html</a>        – 博客园 “无涯” 大佬</p>
+<p>​                                                                                                             – 还有 ‘’ 夯哥 ‘’ </p>
 
           
         
@@ -727,7 +920,7 @@
         
           <a href="/archives">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -746,7 +939,9 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
         
       </div>
