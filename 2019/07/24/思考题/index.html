@@ -95,18 +95,18 @@
   };
 </script>
 
-  <meta name="description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数">
+  <meta name="description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数  组件 Kafka kafka的ack机制的参数及详解  0.提交无反应(丢失)">
 <meta name="keywords" content="思考">
 <meta property="og:type" content="article">
 <meta property="og:title" content="思考题">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/思考题/index.html">
 <meta property="og:site_name" content="Px-Liu">
-<meta property="og:description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数">
+<meta property="og:description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数  组件 Kafka kafka的ack机制的参数及详解  0.提交无反应(丢失)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-24T06:14:08.978Z">
+<meta property="og:updated_time" content="2019-07-24T15:25:54.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="思考题">
-<meta name="twitter:description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数">
+<meta name="twitter:description" content="引言:  学而不思则罔,思而不学则殆 !          – 论语·为政数据仓库 Mysql having与where的区别  12345Having: 是在分组后对数据进行过滤	  : 后面可以使用分组函数(统计函数)	  Where : 是在分组前对数据进行过滤	  : 后面不可以使用分组函数  组件 Kafka kafka的ack机制的参数及详解  0.提交无反应(丢失)">
 
 
 
@@ -421,7 +421,7 @@
                 
               
 
-              <time title="创建时间：2019-07-24 14:05:01 / 修改时间：14:14:08" itemprop="dateCreated datePublished" datetime="2019-07-24T14:05:01+08:00">2019-07-24</time>
+              <time title="创建时间：2019-07-24 14:05:01 / 修改时间：23:25:54" itemprop="dateCreated datePublished" datetime="2019-07-24T14:05:01+08:00">2019-07-24</time>
             </span>
           
 
@@ -472,6 +472,143 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Having: 是在分组后对数据进行过滤</span><br><span class="line">	  : 后面可以使用分组函数(统计函数)</span><br><span class="line">	  </span><br><span class="line">Where : 是在分组前对数据进行过滤</span><br><span class="line">	  : 后面不可以使用分组函数</span><br></pre></td></tr></table></figure>
 
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><hr>
+<h4 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h4><ul>
+<li><p><strong>kafka的ack机制的参数及详解</strong></p>
+<blockquote>
+<p>0.提交无反应(丢失)        1 提交给Leader(丢失)    all   -1  接受并备份(不丢失)</p>
+</blockquote>
+</li>
+<li><p><strong>kafka高吞吐量的原因</strong>  <a href="https://www.jianshu.com/p/6287868c8462" target="_blank" rel="noopener">https://www.jianshu.com/p/6287868c8462</a></p>
+<blockquote>
+<p>顺序读写  零拷贝  分区  批量发送  数据压缩(GZIP,Snappy)             </p>
+</blockquote>
+</li>
+<li><p><strong>Kafka如何保证消息的顺序消费</strong></p>
+<blockquote>
+<p>这得看是不是单机情况</p>
+<p>分区单位P.  同一个P用同一个write log.   保证FIFO .  不同P.不能保证</p>
+<p>​        可以通过Key的Message保证发送同一个p.上</p>
+<p>可以指定(T, P, K)  [指定P. 有序 ,消费时保证一对一消费],</p>
+<p>Partition  Key Topic</p>
+</blockquote>
+</li>
+<li><p><strong>为什么kafka不支持主从分离</strong></p>
+<blockquote>
+<p><strong>引用:</strong>  从某种意义上说，读写分离是由于设计上的缺陷而采取的权宜之计</p>
+<p>为什么要  读写怎么分配  异步拉取怎么玩  消费偏移量维护方式 …</p>
+</blockquote>
+</li>
+<li><p><strong>如何获取topic主题的列表</strong></p>
+<blockquote>
+<p><strong>./kafka-topics.sh  –zookeeper  localhost:2181 –list</strong></p>
+</blockquote>
+</li>
+<li><p><strong>consumer是推还是拉</strong></p>
+<blockquote>
+<p>Pull  :  可以根据自身的消费能力从Broker中拉取数据   缺点 : 不断地循环中轮循</p>
+<p>Push:  当broker推送的速率远大于consumer消费的速率时，consumer恐怕就要崩溃了</p>
+</blockquote>
+</li>
+<li><p><strong>kafka维护消费状态跟踪的方法</strong></p>
+<blockquote>
+<p>​    </p>
+</blockquote>
+</li>
+<li><p><strong>Kafka为什么需要复制</strong></p>
+<blockquote>
+<p>目的: 确保了任何已发布的消息不会丢失，并且可以在机器错误、程序错误或更常见些的软件升级中使用</p>
+</blockquote>
+</li>
+<li><p><strong>如何提高远程用户的吞吐量</strong></p>
+<blockquote>
+<p>如果用户位于与broker不同的数据中心，则可能需要调优套接口缓冲区大小，以对长网络延迟进行摊销</p>
+</blockquote>
+</li>
+<li><p><strong>我们可以在没有Zookeeper的情况下使用Kafka吗</strong></p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 不，不可能越过Zookeeper，直接联系Kafka broker。一旦Zookeeper停止工作，它就不能服务客户端请求。</span><br><span class="line">&gt; Zookeeper主要用于在集群中不同节点之间进行通信</span><br><span class="line">&gt; </span><br><span class="line">&gt; 在Kafka中，它被用于提交偏移量，因此如果节点在任何情况下都失败了，它都可以从之前提交的偏移量中获取</span><br><span class="line">&gt; 除此之外，它还执行其他活动，如: leader检测、分布式同步、配置管理、识别新节点何时离开或连接、集群、节点实时状态等等</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+</li>
+<li><p><strong>Kafka服务器能接收到的最大信息是多少</strong></p>
+<blockquote>
+<p>Kafka服务器可以接收到的消息的最大大小是1000000字节</p>
+</blockquote>
+</li>
+<li><p><strong>broker的意义是什么</strong></p>
+<blockquote>
+<p>broker术语用于引用服务器</p>
+</blockquote>
+</li>
+<li><p><strong>Kafka相对传统技术有什么优势</strong></p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; Apache Kafka与传统的消息传递技术相比优势之处在于：</span><br><span class="line">&gt; </span><br><span class="line">&gt; 快速:单一的Kafka代理可以处理成千上万的客户端，每秒处理数兆字节的读写操作。</span><br><span class="line">&gt; </span><br><span class="line">&gt; 可伸缩:在一组机器上对数据进行分区和简化，以支持更大的数据</span><br><span class="line">&gt; </span><br><span class="line">&gt; 持久:消息是持久性的，并在集群中进行复制，以防止数据丢失。</span><br><span class="line">&gt; </span><br><span class="line">&gt; 设计:它提供了容错保证和持久性</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>传统的</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; RocketMQ: [阿里,参照Kafka涉及思想实现的,亿级消息堆积能力,提供针对消息的过滤功能]...</span><br><span class="line">&gt; </span><br><span class="line">&gt; RabbitMQ: [重量级,生产者不会将消息直接发送给队列,对路由(Routing)，负载均衡(Load balance)、			   久化都有很好的支持]...</span><br><span class="line">&gt; </span><br><span class="line">&gt; ActiveMQ: [JMS Provider实现,少量代码高效实现高级应用场景,支持多协议 可插拔,支持语言较多]...</span><br><span class="line">&gt; </span><br><span class="line">&gt; Redis: [C开发的Nosql数据库,可作一个轻量级的队列服务,&gt;10K奇慢无比]...</span><br><span class="line">&gt; </span><br><span class="line">&gt; ZeroMQ: [号称最快的消息队列系统,金融中使用较多,偏向于实时通信系统]...	</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><ul>
+<li><p><strong>zookeeper 脑裂如何解决</strong></p>
+<blockquote>
+<p>过半机制     <strong>this</strong>.half = n/2;   <strong>return</strong> (set.size() &gt; half);</p>
+<p>节点冗余心跳线</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h4><ul>
+<li><p><strong>HBase的协处理器</strong></p>
+<blockquote>
+<p><strong>两种处理器</strong> : </p>
+<p>*<em>observer *</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 触发器(在固定事件发生时触发)  做饭    买材料 -- 做饭  -- 吃饭 (这么一个过程)  </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>EndServer</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 经常做一些聚合操作 (一个过程 M.Funtion) Max Count  有 Hive</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>卸载协处理器</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;  disable &apos;px&apos;</span><br><span class="line">&gt;  alter &apos;px&apos;,METHOD=&gt;&apos;table_att_unset&apos;,NAME=&gt;&apos;	$1&apos;</span><br><span class="line">&gt;  enable &apos;px&apos;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p><strong>kafka leader选举机制原理</strong></p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; kafka在所有broker中选出一个controller，所有Partition的Leader选举都由controller决定。controller会将Leader的改变直接通过RPC的方式（比Zookeeper Queue的方式更高效）通知需为此作出响应的Broker。同时controller也负责增删Topic以及Replica的重新分配。</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p><strong>Kafka的三种消费模式</strong></p>
+<blockquote>
+<p>[<strong>自动提交offset</strong>,<strong>手动提交Offset</strong>,<strong>手动提交partition的Offset</strong>]    </p>
+</blockquote>
+</li>
+<li><p><strong>kafka节点之间如何复制备份的</strong></p>
+<blockquote>
+<p>​    <strong>Kafka引入了 ISR的概念。ISR是<code>in-sync replicas</code>的简写。ISR的副本保持和leader的同步，当然leader本身也在ISR中。初始状态所有的副本都处于ISR中，当一个消息发送给leader的时候，leader会等待ISR中所有的副本告诉它已经接收了这个消息，如果一个副本失败了，那么它会被移除ISR。下一条消息来的时候，leader就会将消息发送给当前的ISR中节点了。</strong></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h4><ul>
+<li><p><strong>Spark优化方式</strong></p>
+<blockquote>
+<p>​    </p>
+</blockquote>
+</li>
+<li><p><strong>Spark为什么要持久化，一般什么场景下要进行persist操作</strong></p>
+<blockquote>
+<p>​    </p>
+</blockquote>
+</li>
+<li><p><strong>Spark如何方式内存溢出</strong></p>
+<blockquote>
+<p>​    </p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -663,7 +800,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-学而不思则罔-思而不学则殆-–-论语·为政"><span class="nav-number">1.</span> <span class="nav-text">引言:  学而不思则罔,思而不学则殆 !          – 论语·为政</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据仓库"><span class="nav-number">1.1.</span> <span class="nav-text">数据仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Mysql"><span class="nav-number">1.1.1.</span> <span class="nav-text">Mysql</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-学而不思则罔-思而不学则殆-–-论语·为政"><span class="nav-number">1.</span> <span class="nav-text">引言:  学而不思则罔,思而不学则殆 !          – 论语·为政</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据仓库"><span class="nav-number">1.1.</span> <span class="nav-text">数据仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Mysql"><span class="nav-number">1.1.1.</span> <span class="nav-text">Mysql</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件"><span class="nav-number">1.2.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Kafka"><span class="nav-number">1.2.1.</span> <span class="nav-text">Kafka</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zookeeper"><span class="nav-number">1.2.2.</span> <span class="nav-text">Zookeeper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HBase"><span class="nav-number">1.2.3.</span> <span class="nav-text">HBase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spark"><span class="nav-number">1.2.4.</span> <span class="nav-text">Spark</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
