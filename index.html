@@ -188,6 +188,10 @@
       </a>
     </div>
     
+      
+        <p class="site-subtitle">唉~ 言多必失</p>
+      
+    
     
   </div>
 
@@ -361,6 +365,177 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/24/Hive实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小刘">
+      <meta itemprop="description" content="花有重开日,人无再少年">
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Px-Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/24/Hive实战/" class="post-title-link" itemprop="url">Hive实战</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-24 08:55:28 / 修改时间：12:33:36" itemprop="dateCreated datePublished" datetime="2019-09-24T08:55:28+08:00">2019-09-24</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Hive分析函数"><a href="#Hive分析函数" class="headerlink" title="Hive分析函数"></a>Hive分析函数</h2><ul>
+<li><p>SUM AVG MIN MAX</p>
+</li>
+<li><p>Ntile <strong>Row_Number</strong>（123） <strong>Rank</strong>（1 22 4） <strong>Dense_Rank</strong>（1 22 3）</p>
+</li>
+<li><p>(排序编号，分组排序编号，取前topn，分组百分比和组内比例等用途)</p>
+</li>
+</ul>
+<hr>
+<p>  <strong>LAG</strong>(col,n,DEFAULT)   – 列名  往上第几行  默认值（如果第N行数据为null，则使用默认值，如果不指定默认值则使用Null）</p>
+<p><strong>LEAD</strong>(col,n,DEFAULT)  –列名 往下第几行 默认值（如果第N行数据为null，则使用默认值，如果不指定默认值则使用Null）</p>
+<p><strong>First_Value</strong>(取分组内排序后，截至当前行第一个值)</p>
+<p><strong>Last_Value</strong>(取分组内排序后，截至当前行最后一个值)</p>
+<hr>
+<p>颗粒度指标 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 周期指标</span></span><br><span class="line">	<span class="comment">-- 本周周一</span></span><br><span class="line">	date_add(next_day('2019-01-01','mo'), -7)  <span class="comment">-- 找出下一个周的周一 -7 得出这周的周一</span></span><br><span class="line">	<span class="comment">-- 本周周日</span></span><br><span class="line">	date_add(next_day('2019-01-01','mo'), -1)  <span class="comment">-- 找出下一个周的周一 -1 得出这周的周日</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 月指标</span></span><br><span class="line">	date_format('2019-01-01','yyyy-MM')</span><br><span class="line"></span><br><span class="line"><span class="comment">--新增用户</span></span><br><span class="line">	今日Uv left Join 昨日活跃 And 昨日活跃 is null </span><br><span class="line"></span><br><span class="line"><span class="comment">-- 留存指标</span></span><br><span class="line">	今日活跃 left Join 昨日新增  And 新增用户.create_time = date_add('2019-01-01',-1)</span><br><span class="line">    </span><br><span class="line"><span class="comment">-- 留存率指标</span></span><br><span class="line">	留存人数 / 新增用户 * 100</span><br><span class="line">	</span><br><span class="line"><span class="comment">-- 沉默用户	(安装启动一次 且一周前)</span></span><br><span class="line">	对活跃用户进行Group By 聚合Count(*) + Min(time) &lt; date_add('2019-01-01',-7)</span><br></pre></td></tr></table></figure>
+
+<p><code>concat</code> – 字符串的拼接(<code>str1</code>,<code>str2</code>,<code>str3</code>)</p>
+<p><code>concat_ws</code> –  指定字符拼接(<code>指定字符</code>,<code>collect_set()</code>,<code>collect_list()</code>)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	<div>
+		
+	</div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -2006,7 +2181,7 @@
         
           <a href="/archives">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2035,7 +2210,9 @@
         
           
         
-        <span class="site-state-item-count">7</span>
+          
+        
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span>
         
       </div>
