@@ -95,18 +95,18 @@
   };
 </script>
 
-  <meta name="description" content="分布式是什么1我们常说的分布式，或者说分布式（Distribution）这个术语，指的是各个异构的节点形成的系统，所谓异构，就是结构不同、功能不同的节点。   例子:  ​    小饭店原来只有一个厨师，切菜洗菜备料炒菜全干。后来客人多了，厨房一个厨师忙不过来，又请了个厨师，两个厨师都能炒一样的菜，这两个厨师的关系是集群。为了让厨师专心炒菜，把菜做到极致，又请了个配菜师负责切菜，备菜，备料，厨师">
-<meta name="keywords" content="Start">
+  <meta name="description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
+<meta name="keywords" content="Properties">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Distributed - 1">
-<meta property="og:url" content="http://yoursite.com/2019/07/27/Distributed-1/index.html">
+<meta property="og:title" content="Zookeeper">
+<meta property="og:url" content="http://yoursite.com/2019/10/17/Zookeeper/index.html">
 <meta property="og:site_name" content="Px-Liu">
-<meta property="og:description" content="分布式是什么1我们常说的分布式，或者说分布式（Distribution）这个术语，指的是各个异构的节点形成的系统，所谓异构，就是结构不同、功能不同的节点。   例子:  ​    小饭店原来只有一个厨师，切菜洗菜备料炒菜全干。后来客人多了，厨房一个厨师忙不过来，又请了个厨师，两个厨师都能炒一样的菜，这两个厨师的关系是集群。为了让厨师专心炒菜，把菜做到极致，又请了个配菜师负责切菜，备菜，备料，厨师">
+<meta property="og:description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-27T11:22:16.542Z">
+<meta property="og:updated_time" content="2019-10-17T14:28:58.238Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Distributed - 1">
-<meta name="twitter:description" content="分布式是什么1我们常说的分布式，或者说分布式（Distribution）这个术语，指的是各个异构的节点形成的系统，所谓异构，就是结构不同、功能不同的节点。   例子:  ​    小饭店原来只有一个厨师，切菜洗菜备料炒菜全干。后来客人多了，厨房一个厨师忙不过来，又请了个厨师，两个厨师都能炒一样的菜，这两个厨师的关系是集群。为了让厨师专心炒菜，把菜做到极致，又请了个配菜师负责切菜，备菜，备料，厨师">
+<meta name="twitter:title" content="Zookeeper">
+<meta name="twitter:description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/27/Distributed-1/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/17/Zookeeper/">
 
 
 
@@ -125,7 +125,7 @@
 </script>
 
   
-  <title>Distributed - 1 | Px-Liu</title>
+  <title>Zookeeper | Px-Liu</title>
   
 
 
@@ -382,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/Distributed-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/17/Zookeeper/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小刘">
@@ -399,7 +399,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Distributed - 1
+          <h1 class="post-title" itemprop="name headline">Zookeeper
 
               
             
@@ -425,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-07-27 19:17:12 / 修改时间：19:22:16" itemprop="dateCreated datePublished" datetime="2019-07-27T19:17:12+08:00">2019-07-27</time>
+              <time title="创建时间：2019-10-17 21:47:00 / 修改时间：22:28:58" itemprop="dateCreated datePublished" datetime="2019-10-17T21:47:00+08:00">2019-10-17</time>
             </span>
           
 
@@ -469,18 +469,14 @@
       
 
       
-        <hr>
-<h3 id="分布式是什么"><a href="#分布式是什么" class="headerlink" title="分布式是什么"></a>分布式是什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们常说的分布式，或者说分布式（Distribution）这个术语，指的是各个异构的节点形成的系统，所谓异构，就是结构不同、功能不同的节点。</span><br></pre></td></tr></table></figure>
+        <h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> 启动ZK服务</span><br><span class="line"> 	bin/zkServer.sh start</span><br><span class="line"></span><br><span class="line">查看ZK服务状态</span><br><span class="line">	bin/zkServer.sh status</span><br><span class="line"></span><br><span class="line">停止ZK服务</span><br><span class="line">	bin/zkServer.sh stop</span><br><span class="line"></span><br><span class="line">重启ZK服务</span><br><span class="line">	bin/zkServer.sh restart</span><br><span class="line"></span><br><span class="line">连接服务器</span><br><span class="line">	zkCli.sh -server 0.0.0.0:2181</span><br><span class="line"></span><br><span class="line">退出 Or 帮助</span><br><span class="line">	quit help</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>例子:</p>
-<blockquote>
-<p>​    小饭店原来只有一个厨师，切菜洗菜备料炒菜全干。后来客人多了，厨房一个厨师忙不过来，又请了个厨师，两个厨师都能炒一样的菜，这两个厨师的关系是集群。为了让厨师专心炒菜，把菜做到极致，又请了个配菜师负责切菜，备菜，备料，厨师和配菜师的关系是分布式，一个配菜师也忙不过来了，又请了个配菜师，两个配菜师关系是集群.</p>
+<h2 id="To-configure"><a href="#To-configure" class="headerlink" title="To configure"></a>To configure</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> The number of milliseconds of each tick  --》 每个刻度的毫秒数</span></span><br><span class="line">tickTime=2000</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that the initial</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> synchronization phase can take --》 同步需要Time</span></span><br><span class="line">initLimit=10</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that can pass between</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sending a request and getting an acknowledgement</span></span><br><span class="line">syncLimit=5</span><br><span class="line"><span class="meta">#</span><span class="bash"> the directory <span class="built_in">where</span> the snapshot is stored.  --》 存储快照的目录</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">do</span> not use /tmp <span class="keyword">for</span> storage, /tmp here is just  --》 tmp临时路径</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> example sakes.  --》 (| --》此路径是Zk选举所参考参数《-- |)</span></span><br><span class="line">dataDir=/export/data/zk</span><br><span class="line"><span class="meta">#</span><span class="bash"> the port at <span class="built_in">which</span> the clients will connect  --》 客户端连接的端口</span></span><br><span class="line">clientPort=2181</span><br><span class="line"><span class="meta">#</span><span class="bash"> the maximum number of client connections. --》客户端连接的最大数量</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> increase this <span class="keyword">if</span> you need to handle more clients --》 如果你需要处理更多的客户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> maxClientCnxns=60、 --》 最大客户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Be sure to <span class="built_in">read</span> the maintenance section of the --》 请务必阅读</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> administrator guide before turning on autopurge.  --》 打开自动刷新前的管理员指南</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> http://zookeeper.apache.org/doc/current/zookeeperAdmin.html<span class="comment">#sc_maintenance</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of snapshots to retain <span class="keyword">in</span> dataDir</span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.snapRetainCount=3</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Purge task interval <span class="keyword">in</span> hours</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Set to <span class="string">"0"</span> to <span class="built_in">disable</span> auto purge feature</span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.purgeInterval=1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">zookeeper -- Ip --  通讯端口：选举端口</span></span><br><span class="line">server.1=node01:2887:3887</span><br><span class="line">server.2=node02:2887:3887</span><br><span class="line">server.3=node03:2887:3887</span><br></pre></td></tr></table></figure>
+
+<h2 id="若有不清楚可前往"><a href="#若有不清楚可前往" class="headerlink" title="若有不清楚可前往"></a>若有不清楚可前往</h2><blockquote>
+<p>cnblogs.com/linjiqin/p/6029146.html  –&gt; Zookeeper常用命令</p>
+<p><a href="https://zookeeper.apache.org/doc/r3.4.14/" target="_blank" rel="noopener">https://zookeeper.apache.org/doc/r3.4.14/</a> –&gt; Apache</p>
 </blockquote>
-</li>
-</ul>
-<hr>
-<p>### </p>
 
       
     </div>
@@ -521,7 +517,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Start/" <i class="fa fa-tag">sdf># Start</a>
+            <a href="/tags/Properties/" <i class="fa fa-tag">sdf># Properties</a>
           
         </div>
       
@@ -534,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/26/Alive/" rel="next" title="Alive-">
-                <i class="fa fa-chevron-left"></i> Alive-
+              <a href="/2019/10/17/Kafka/" rel="next" title="Kafka配置">
+                <i class="fa fa-chevron-left"></i> Kafka配置
               </a>
             
           </div>
@@ -543,10 +539,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/27/Distributed-Thing/" rel="prev" title="Distributed - Thing">
-                Distributed - Thing <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -686,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分布式是什么"><span class="nav-number">1.</span> <span class="nav-text">分布式是什么</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#command"><span class="nav-number">1.</span> <span class="nav-text">command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-configure"><span class="nav-number">2.</span> <span class="nav-text">To configure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#若有不清楚可前往"><span class="nav-number">3.</span> <span class="nav-text">若有不清楚可前往</span></a></li></ol></div>
             
 
           </div>
