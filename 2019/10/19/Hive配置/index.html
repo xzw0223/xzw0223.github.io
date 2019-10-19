@@ -95,18 +95,18 @@
   };
 </script>
 
-  <meta name="description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
+  <meta name="description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 <meta name="keywords" content="Properties">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zookeeper">
-<meta property="og:url" content="http://yoursite.com/2019/10/17/Zookeeper/index.html">
+<meta property="og:title" content="Hive配置">
+<meta property="og:url" content="http://yoursite.com/2019/10/19/Hive配置/index.html">
 <meta property="og:site_name" content="Px-Liu">
-<meta property="og:description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
+<meta property="og:description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-17T14:28:58.238Z">
+<meta property="og:updated_time" content="2019-10-19T12:54:39.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zookeeper">
-<meta name="twitter:description" content="command1234567891011121314151617 启动ZK服务 	bin/zkServer.sh start查看ZK服务状态	bin/zkServer.sh status停止ZK服务	bin/zkServer.sh stop重启ZK服务	bin/zkServer.sh restart连接服务器	zkCli.sh -server 0.0.0.0:2181退出 Or 帮助	quit h">
+<meta name="twitter:title" content="Hive配置">
+<meta name="twitter:description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/10/17/Zookeeper/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/19/Hive配置/">
 
 
 
@@ -125,7 +125,7 @@
 </script>
 
   
-  <title>Zookeeper | Px-Liu</title>
+  <title>Hive配置 | Px-Liu</title>
   
 
 
@@ -382,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/17/Zookeeper/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/Hive配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小刘">
@@ -399,7 +399,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Zookeeper
+          <h1 class="post-title" itemprop="name headline">Hive配置
 
               
             
@@ -425,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-10-17 21:47:00 / 修改时间：22:28:58" itemprop="dateCreated datePublished" datetime="2019-10-17T21:47:00+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-19 19:20:11 / 修改时间：20:54:39" itemprop="dateCreated datePublished" datetime="2019-10-19T19:20:11+08:00">2019-10-19</time>
             </span>
           
 
@@ -469,13 +469,37 @@
       
 
       
-        <h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> 启动ZK服务</span><br><span class="line"> 	bin/zkServer.sh start</span><br><span class="line"></span><br><span class="line">查看ZK服务状态</span><br><span class="line">	bin/zkServer.sh status</span><br><span class="line"></span><br><span class="line">停止ZK服务</span><br><span class="line">	bin/zkServer.sh stop</span><br><span class="line"></span><br><span class="line">重启ZK服务</span><br><span class="line">	bin/zkServer.sh restart</span><br><span class="line"></span><br><span class="line">连接服务器</span><br><span class="line">	zkCli.sh -server 0.0.0.0:2181</span><br><span class="line"></span><br><span class="line">退出 Or 帮助</span><br><span class="line">	quit help</span><br></pre></td></tr></table></figure>
+        <h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><blockquote>
+<p><strong>交互方式一 :</strong>    (Hive交互Shell)</p>
+<ul>
+<li>[root@node01 bin]# ./hive</li>
+</ul>
+<p><strong>交互方式二 :</strong>    (Hive JDBC服务)</p>
+<ul>
+<li>[root@node01 bin]# ./hive –service hiveserver2    (前台启动)</li>
+<li>[root@node01 bin]# nohup bin/hive –service hiveserver2  &amp; (后台启动)</li>
+</ul>
+<hr>
+<ul>
+<li>[root@node01 bin]# ./beeline</li>
+<li>beeline&gt; !connect jdbc:hive2://Xxx:10000</li>
+<li><strong>注意：</strong>如果使用Beeline方式连接HiveServer2，一定要保证Hive在Mysql当中的元数据库已经创建成功，不然就会拒绝连接</li>
+</ul>
+<p><strong>交互方式三 :</strong>    (Hive命令)</p>
+<ul>
+<li>[root@node01 bin]# ./hive -e “命令”</li>
+<li>[root@node01 bin]# ./hive -f “文本”</li>
+</ul>
+</blockquote>
+<h2 id="To-configure"><a href="#To-configure" class="headerlink" title="To configure"></a>To configure</h2><h4 id="Hive-env-sh-依赖配置）"><a href="#Hive-env-sh-依赖配置）" class="headerlink" title="Hive.env.sh  (依赖配置）"></a>Hive.env.sh  (依赖配置）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 指定Hadoop配置路径</span><br><span class="line">HADOOP_HOME=/export/servers/hadoop-2.6.0-cdh5.14.0</span><br><span class="line"><span class="meta">#</span> 导出配置单元目录</span><br><span class="line">export HIVE_CONF_DIR=/export/servers/hive-1.1.0-cdh5.14.0/conf</span><br></pre></td></tr></table></figure>
 
-<h2 id="To-configure"><a href="#To-configure" class="headerlink" title="To configure"></a>To configure</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> The number of milliseconds of each tick  --》 每个刻度的毫秒数</span></span><br><span class="line">tickTime=2000</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that the initial</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> synchronization phase can take --》 同步需要Time</span></span><br><span class="line">initLimit=10</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that can pass between</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sending a request and getting an acknowledgement</span></span><br><span class="line">syncLimit=5</span><br><span class="line"><span class="meta">#</span><span class="bash"> the directory <span class="built_in">where</span> the snapshot is stored.  --》 存储快照的目录</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">do</span> not use /tmp <span class="keyword">for</span> storage, /tmp here is just  --》 tmp临时路径</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> example sakes.  --》 (| --》此路径是Zk选举所参考参数《-- |)</span></span><br><span class="line">dataDir=/export/data/zk</span><br><span class="line"><span class="meta">#</span><span class="bash"> the port at <span class="built_in">which</span> the clients will connect  --》 客户端连接的端口</span></span><br><span class="line">clientPort=2181</span><br><span class="line"><span class="meta">#</span><span class="bash"> the maximum number of client connections. --》客户端连接的最大数量</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> increase this <span class="keyword">if</span> you need to handle more clients --》 如果你需要处理更多的客户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> maxClientCnxns=60、 --》 最大客户</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Be sure to <span class="built_in">read</span> the maintenance section of the --》 请务必阅读</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> administrator guide before turning on autopurge.  --》 打开自动刷新前的管理员指南</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> http://zookeeper.apache.org/doc/current/zookeeperAdmin.html<span class="comment">#sc_maintenance</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of snapshots to retain <span class="keyword">in</span> dataDir</span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.snapRetainCount=3</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Purge task interval <span class="keyword">in</span> hours</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Set to <span class="string">"0"</span> to <span class="built_in">disable</span> auto purge feature</span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.purgeInterval=1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">zookeeper -- Ip --  通讯端口：选举端口</span></span><br><span class="line">server.1=node01:2887:3887</span><br><span class="line">server.2=node02:2887:3887</span><br><span class="line">server.3=node03:2887:3887</span><br></pre></td></tr></table></figure>
+<h4 id="Hive-site-sh-自身配置"><a href="#Hive-site-sh-自身配置" class="headerlink" title="Hive.site.sh (自身配置)"></a>Hive.site.sh (自身配置)</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mysql地址localhos --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionURL<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>jdbc:mysql://xxxx:3306/hive?createDatabaseIfNotExist=true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mysql的驱动 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionDriverName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 用户名 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionUserName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>UserName<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 密码 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionPassword<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 显示当前数据库 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.cli.print.current.db<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 显示查询表的行头信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.cli.print.header<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 绑定的TCP接口--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.server2.thrift.bind.host<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>Xxx<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 指向的是运行metastore服务的主机 --&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">             &lt;property&gt;</span></span><br><span class="line"><span class="comment">                &lt;name&gt;hive.metastore.uris&lt;/name&gt;</span></span><br><span class="line"><span class="comment">                &lt;value&gt;thrift://xx&lt;/value&gt;</span></span><br><span class="line"><span class="comment">        &lt;/property&gt;</span></span><br><span class="line"><span class="comment">	--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="若有不清楚可前往"><a href="#若有不清楚可前往" class="headerlink" title="若有不清楚可前往"></a>若有不清楚可前往</h2><blockquote>
-<p>cnblogs.com/linjiqin/p/6029146.html  –&gt; Zookeeper常用命令</p>
-<p><a href="https://zookeeper.apache.org/doc/r3.4.14/" target="_blank" rel="noopener">https://zookeeper.apache.org/doc/r3.4.14/</a> –&gt; Apache</p>
+<p><a href="https://www.cnblogs.com/netuml/p/7841387.html" target="_blank" rel="noopener">https://www.cnblogs.com/netuml/p/7841387.html</a>  –&gt; Hive 启动方式 内置服务</p>
+<p> <a href="https://www.jianshu.com/p/dcef793cf395" target="_blank" rel="noopener">https://www.jianshu.com/p/dcef793cf395</a>  –&gt; Hive Server2配置（翻译）</p>
+<p> <a href="https://blog.csdn.net/dufufd/article/details/78614958" target="_blank" rel="noopener">https://blog.csdn.net/dufufd/article/details/78614958</a>  –&gt; Hive metastore三种配置方式</p>
+<p> <a href="https://www.cnblogs.com/qingyunzong/p/8715925.html" target="_blank" rel="noopener">https://www.cnblogs.com/qingyunzong/p/8715925.html</a>  –&gt; Hive的连接3种连接方式</p>
 </blockquote>
 
       
@@ -530,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/17/Kafka/" rel="next" title="Kafka配置">
-                <i class="fa fa-chevron-left"></i> Kafka配置
+              <a href="/2019/10/17/Zookeeper/" rel="next" title="Zookeeper">
+                <i class="fa fa-chevron-left"></i> Zookeeper
               </a>
             
           </div>
@@ -539,10 +563,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/19/Hive配置/" rel="prev" title="Hive配置">
-                Hive配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -682,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#command"><span class="nav-number">1.</span> <span class="nav-text">command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-configure"><span class="nav-number">2.</span> <span class="nav-text">To configure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#若有不清楚可前往"><span class="nav-number">3.</span> <span class="nav-text">若有不清楚可前往</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Command"><span class="nav-number">1.</span> <span class="nav-text">Command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-configure"><span class="nav-number">2.</span> <span class="nav-text">To configure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hive-env-sh-依赖配置）"><span class="nav-number">2.0.1.</span> <span class="nav-text">Hive.env.sh  (依赖配置）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hive-site-sh-自身配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">Hive.site.sh (自身配置)</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#若有不清楚可前往"><span class="nav-number">3.</span> <span class="nav-text">若有不清楚可前往</span></a></li></div>
             
 
           </div>
