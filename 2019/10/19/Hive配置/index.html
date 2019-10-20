@@ -98,14 +98,14 @@
   <meta name="description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 <meta name="keywords" content="Properties">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hive配置">
+<meta property="og:title" content="Hive">
 <meta property="og:url" content="http://yoursite.com/2019/10/19/Hive配置/index.html">
 <meta property="og:site_name" content="Px-Liu">
 <meta property="og:description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-19T12:54:39.837Z">
+<meta property="og:updated_time" content="2019-10-20T03:04:45.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hive配置">
+<meta name="twitter:title" content="Hive">
 <meta name="twitter:description" content="Command 交互方式一 :    (Hive交互Shell)  [root@node01 bin]# ./hive  交互方式二 :    (Hive JDBC服务)  [root@node01 bin]# ./hive –service hiveserver2    (前台启动) [root@node01 bin]# nohup bin/hive –service hiveserver2">
 
 
@@ -125,7 +125,7 @@
 </script>
 
   
-  <title>Hive配置 | Px-Liu</title>
+  <title>Hive | Px-Liu</title>
   
 
 
@@ -399,7 +399,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hive配置
+          <h1 class="post-title" itemprop="name headline">Hive
 
               
             
@@ -425,13 +425,23 @@
                 
               
 
-              <time title="创建时间：2019-10-19 19:20:11 / 修改时间：20:54:39" itemprop="dateCreated datePublished" datetime="2019-10-19T19:20:11+08:00">2019-10-19</time>
+              <time title="创建时间：2019-10-19 19:20:11" itemprop="dateCreated datePublished" datetime="2019-10-19T19:20:11+08:00">2019-10-19</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-20 11:04:45" itemprop="dateModified" datetime="2019-10-20T11:04:45+08:00">2019-10-20</time>
+              </span>
             
           
 
@@ -491,7 +501,7 @@
 <li>[root@node01 bin]# ./hive -f “文本”</li>
 </ul>
 </blockquote>
-<h2 id="To-configure"><a href="#To-configure" class="headerlink" title="To configure"></a>To configure</h2><h4 id="Hive-env-sh-依赖配置）"><a href="#Hive-env-sh-依赖配置）" class="headerlink" title="Hive.env.sh  (依赖配置）"></a>Hive.env.sh  (依赖配置）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 指定Hadoop配置路径</span><br><span class="line">HADOOP_HOME=/export/servers/hadoop-2.6.0-cdh5.14.0</span><br><span class="line"><span class="meta">#</span> 导出配置单元目录</span><br><span class="line">export HIVE_CONF_DIR=/export/servers/hive-1.1.0-cdh5.14.0/conf</span><br></pre></td></tr></table></figure>
+<h2 id="To-configure"><a href="#To-configure" class="headerlink" title="To configure"></a>To configure</h2><h4 id="Hive-env-sh-依赖配置）"><a href="#Hive-env-sh-依赖配置）" class="headerlink" title="Hive.env.sh  (依赖配置）"></a>Hive.env.sh  (依赖配置）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 指定Hadoop配置路径</span></span><br><span class="line">HADOOP_HOME=/export/servers/hadoop-2.6.0-cdh5.14.0</span><br><span class="line"><span class="meta">#</span><span class="bash"> 导出配置单元目录</span></span><br><span class="line">export HIVE_CONF_DIR=/export/servers/hive-1.1.0-cdh5.14.0/conf</span><br></pre></td></tr></table></figure>
 
 <h4 id="Hive-site-sh-自身配置"><a href="#Hive-site-sh-自身配置" class="headerlink" title="Hive.site.sh (自身配置)"></a>Hive.site.sh (自身配置)</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mysql地址localhos --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionURL<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>jdbc:mysql://xxxx:3306/hive?createDatabaseIfNotExist=true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- mysql的驱动 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionDriverName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 用户名 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionUserName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>UserName<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 密码 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionPassword<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 显示当前数据库 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.cli.print.current.db<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 显示查询表的行头信息--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.cli.print.header<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 绑定的TCP接口--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.server2.thrift.bind.host<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>Xxx<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 指向的是运行metastore服务的主机 --&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">             &lt;property&gt;</span></span><br><span class="line"><span class="comment">                &lt;name&gt;hive.metastore.uris&lt;/name&gt;</span></span><br><span class="line"><span class="comment">                &lt;value&gt;thrift://xx&lt;/value&gt;</span></span><br><span class="line"><span class="comment">        &lt;/property&gt;</span></span><br><span class="line"><span class="comment">	--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
